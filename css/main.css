@@ -11,7 +11,10 @@ body {
 
 .hidden { display: none }
 
-#game-boards { width: 100%; text-align: center; }
+#game-boards { 
+	width: 100%; 
+	text-align: center; 
+}
 
 .puzzle-pieces, .puzzle-board {
 	margin-top: 40px;
@@ -23,7 +26,10 @@ body {
 	overflow: hidden;
 }
 
-.puzzle-pieces { width: 300px; margin-right: 20px; }
+.puzzle-pieces { 
+	width: 300px;
+	margin-right: 20px; 
+}
 
 .puzzle-board { width: 600px; }
 
@@ -34,19 +40,13 @@ body {
 	cursor: pointer;
 }
 
-.puzzle-pieces img:nth-child(odd) { margin-left: auto }
-
-/* arrange the puzzle pieces on the board */
-.drop-zone img {
-	position: absolute;
-	bottom: 0;
-	padding: 0;
-	margin: 0;
-	width: auto;
+.puzzle-pieces img:nth-child(odd) {
+    margin-left: auto
 }
 
-.br img, .bl img { top: 0; }
-.tl img, .bl img { right: 0; }
+
+/* arrange the puzzle pieces on the board */
+
 
 
 /* set up drop zones */
@@ -57,6 +57,18 @@ body {
 	float: left;
 	position: relative;
 }
+
+.br img, .bl img {top: 0;}
+.tl img, .bl img {right: 0;}
+
+.drop-zone img {
+	width: auto;
+	bottom: 0;
+	padding: 0;
+	cursor: default;
+	position: absolute;
+}
+
 
 /* end board styles */
 
@@ -71,7 +83,7 @@ header {
 
 header h2 {
 	font-size: 3em;
-  letter-spacing: 3px;
+  	letter-spacing: 3px;
 	margin: 10px 0
 }
 
@@ -88,7 +100,10 @@ footer {
 	text-align: center;
 }
 
-#buttonHolder { margin: 0px auto; text-align: center; }
+#buttonHolder { 
+	margin: 0px auto; 
+	text-align: center; 
+}
 
 #buttonHolder img {
 	margin-left: 5px;
