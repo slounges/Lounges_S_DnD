@@ -4,7 +4,10 @@
 				// querySelectorAll is for a one to many relationship and returns a NodeList (an array) of matching elements
 				puzzlePieces = document.querySelectorAll(".puzzle-image"),
 				dropZones = document.querySelectorAll(".drop-zone"),
-				gameBoard = document.querySelector(".puzzle-board"); // one to one relationship -> returns the first matching element
+				gameBoard = document.querySelector(".puzzle-board"), // one to one relationship -> returns the first matching element
+				zonePieces = document.querySelector('puzzle-pieces');
+
+
 
 	let imageNames = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
@@ -36,15 +39,23 @@
 	}
 
 	function allowDrop(event) {
-		console.log('dropped something on me');
+		// if a drop zone already has a puzzle piece, this function will stop another piece from being added.
+		if (this.children.length >= 1) {
+			return;
+		}
 
+		//event.preventDefault();
+		console.log('dropped an image');
+
+		// get the dragged element's ID from the data transfer
 		let droppedImage = event.dataTransfer.getData("draggedImg");
-		// let currentTrack = event.dataTransfer.getData('targetTrack');
 
+		// add that image to whatever drop zone we're dropping on
 		event.target.appendChild(document.querySelector(`#${droppedImage}`));
-		//debugger;
 	}
 
+
+	
 	// click on the bottom buttons to change the puzzle image we're working with
 	puzzleButtons.forEach(button => button.addEventListener('click', changeImageSet));
 	puzzlePieces.forEach(piece => piece.addEventListener('dragstart', allowDrag));
