@@ -1,7 +1,7 @@
-# The Amazing Drag and Drop Game
+# The Amazing Drag and Drop Game!
 
 ## Description
-This repo is for an amazing Drag and Drop Javascript Game. The game objective is to get all of the puzzle pieces on the board to show a final completed image. Each piece can only be placed on the board once. After one puzzle is completed the user can click on the next thumbnail at the bottom. This resets the game and the user can begin to solve another puzzle.
+This repo is for an amazing Drag and Drop Javascript Game! The game objective is to get all of the puzzle pieces on the board to show a final completed image. Each piece can only be placed on the board once. After one puzzle is completed the user can click on the next thumbnail at the bottom. This resets the game and the user can begin to solve another puzzle!
 
 ## MIT Liscence
 
